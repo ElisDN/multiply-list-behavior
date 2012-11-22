@@ -53,7 +53,7 @@
  *
  * <pre>
  * <?php $items = CHtml::listData(Category::model()->findAll(), 'id', 'name'); ?>
- * <?php echo $form->checkBoxList($model, 'categoriesArray', $items; ?>
+ * <?php echo $form->checkBoxList($model, 'categoriesArray', $items); ?>
  * </pre>
  *
  * and manually process new values in Model::afterSave() method
