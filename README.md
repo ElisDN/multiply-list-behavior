@@ -69,4 +69,4 @@ You can use this property as field in your forms:
 <?php echo $form->checkBoxList($model, 'categoriesArray', CHtml::listData(Category::model()->findAll(), 'id', 'name')); ?>
 ~~~
 
-and manually process new values in `Model::afterSave()` method or process in your controller after line `$model->attributes=$_POST['Post']`.
+and manually process new values in `Post::afterSave()` method or process in your controller after line `$model->attributes=$_POST['Post']`.
