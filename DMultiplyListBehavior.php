@@ -56,7 +56,7 @@
  * <?php echo $form->checkBoxList($model, 'categoriesArray', $items); ?>
  * </pre>
  *
- * and manually process new values in Model::afterSave() method
+ * and manually process new values in Post::afterSave() method
  * or process in your controller after line $model->attributes=$_POST['Post'].
  *
  * @author ElisDN <mail@elisdn.ru>
