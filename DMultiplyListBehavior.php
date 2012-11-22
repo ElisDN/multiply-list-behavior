@@ -96,11 +96,7 @@ class DMultiplyListBehavior extends CActiveRecordBehavior
             return null;
 
         if ($this->value === null)
-        {
-            $this->value = array();
-            foreach ($this->getOwner()->{$this->relation} as $item)
-                $this->value[] = $item->{$this->relationPk};
-        }
+            $this->value = CHtml::listData($this->getOwner()->{$this->relation}, $this->relationPk, $this->relationPk);
 
         return $this->value;
     }
