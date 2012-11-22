@@ -19,8 +19,7 @@
  *     public function relations()
  *     {
  *         return array(
- *             'categories'=>array(self::MANY_MANY, 'Category', '{{post_category}}(post_id, category_id)'
- *              ),
+ *             'categories'=>array(self::MANY_MANY, 'Category', '{{post_category}}(post_id, category_id)'),
  *         ),
  *     );
  *
