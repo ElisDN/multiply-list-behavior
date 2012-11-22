@@ -1,7 +1,7 @@
 <?php
 /**
  * DMultiplyListBehavior
- * Adds new property into model fo getting related list as array of primary keys.
+ * Adds new property into model for getting related list as array of primary keys.
  * It can be helpful for working with CHtml::activeCheckBoxList() and multiple CHtml::activeDropDownList().
  *
  * You can use property $model->categoriesArray for example.
