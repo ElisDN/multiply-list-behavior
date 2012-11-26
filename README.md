@@ -5,7 +5,7 @@ Adds new property into model for getting related list as array of primary keys.
 
 It can be helpful for working with `CHtml::activeCheckBoxList()` and multiple `CHtml::activeDropDownList()`.
 
-[README RUS](http://www.elisdn.ru/blog/26)
+[README RUS](http://www.elisdn.ru/blog/26/chekboksi-dlia-sviazei-mnogie-ko-mnogim-v-yii)
 
 Installation
 ------------
