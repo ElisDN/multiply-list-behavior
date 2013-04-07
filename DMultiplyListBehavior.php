@@ -53,6 +53,7 @@
  *
  * @author ElisDN <mail@elisdn.ru>
  * @link http://www.elisdn.ru
+ * @version 1.1
  */
 
 class DMultiplyListBehavior extends CActiveRecordBehavior
