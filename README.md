@@ -21,13 +21,6 @@ You can use property `$model->categoriesArray` for example:
 [php]
 class Post extends CActiveRecord
 {
-    public function rules()
-    {
-        return array(
-            array('categoriesArray', 'safe'),
-        );
-    }
-
     public function relations()
     {
         return array(

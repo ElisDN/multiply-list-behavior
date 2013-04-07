@@ -9,13 +9,6 @@
  * <pre>
  * class Post extends CActiveRecord
  * {
- *     public function rules()
- *     {
- *         return array(
- *             array('categoriesArray', 'safe'),
- *         );
- *     }
- *
  *     public function relations()
  *     {
  *         return array(
@@ -79,7 +72,18 @@ class DMultiplyListBehavior extends CActiveRecordBehavior
 
     protected $value;
 
-	public function canGetProperty($name)
+    /**
+     * @param CActiveRecord $owner
+     */
+    public function attach($owner)
+    {
+        $validator = new CSafeValidator;
+        $validator->attributes = array($this->attribute);
+        $owner->getValidatorList()->add($validator);
+        parent::attach($owner);
+    }
+
+    public function canGetProperty($name)
     {
         return $this->validProperty($name);
     }
