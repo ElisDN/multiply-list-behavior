@@ -40,14 +40,31 @@ class Post extends CActiveRecord
         );
     }
 
-    // Process new array there if needle
     protected function afterSave()
     {
-        foreach ($this->categoriesArray as $id)
-        {
-            // ...
-        }
+        $this->refreshCategories();
         parent::afterSave();
+    }
+
+    protected function refreshCategories()
+    {
+        $categories = $this->categoriesArray;
+ 
+        PostCategory::model()->deleteAllByAttributes(array('post_id'=>$this->id));
+ 
+        if (is_array($categories))
+        {
+            foreach ($categories as $id)
+            {
+                if (Category::model()->exists('id=:id', array(':id'=>$id)))
+                {
+                    $postCat = new PostCategory();
+                    $postCat->post_id = $this->id;
+                    $postCat->category_id = $id;
+                    $postCat->save();
+                }
+            }
+        }
     }
 }
 ~~~
