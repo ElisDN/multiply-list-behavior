@@ -1,7 +1,7 @@
 MultiplyList ActiveRecord Behavior for Yii
 ==========================
 
-Adds new property into model for getting related list as array of primary keys.
+Adds a new property into your model for getting related list as array of primary keys.
 
 It can be helpful for working with `CHtml::activeCheckBoxList()` and multiple `CHtml::activeDropDownList()`.
 
@@ -71,7 +71,7 @@ class Post extends CActiveRecord
 
 Property `$model->categoriesArray` returns array of related PKs like `Array(5, 12, 18, ...)`.
 
-You can use this property as field in your forms:
+You can use this property as a field in your forms:
 
 ~~~
 [php]
